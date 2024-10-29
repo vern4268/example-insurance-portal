@@ -1,0 +1,30 @@
+.container {
+    padding: 20px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-button,
+.sign-out-button {
+    padding: 15px 20px;
+    font-size: 26px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sign-out-button {
+    color: black;
+    border: 1px solid black;
+}
+
+.sign-out-button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}

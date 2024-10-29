@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.navigate-to-signin-button {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.navigate-to-signin-button:hover {
+    background-color: white;
+    color: black;
+}

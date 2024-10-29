@@ -1,0 +1,22 @@
+.container {
+    padding: 5px 10px;
+    border-top: 1px solid grey;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-card-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.user-card-name-and-email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

@@ -1,8 +1,14 @@
-import { auth } from '../../auth';
+import { redirect } from 'next/navigation';
+import { auth } from './auth';
 
 const AppRoot = async () => {
     const session = await auth();
-    return <pre>{JSON.stringify(session, null, 2)}</pre>;
+
+    if (session) {
+        return redirect('/users');
+    }
+
+    redirect('/signin');
 };
 
 export default AppRoot;
