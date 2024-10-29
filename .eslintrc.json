@@ -1,0 +1,93 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+        "error",
+        {
+            "variables": false,
+            "functions": false
+        }
+    ],
+    "react/prop-types": "off",
+    "import/no-anonymous-default-export": "off",
+    "react/display-name": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+        }
+    ],
+    "class-methods-use-this": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "max-len": "off",
+    "arrow-parens": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-unresolved": "error",
+    "linebreak-style": 0,
+    "semi-style": ["error", "last"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-multi-spaces": "error",
+    "no-empty": "error",
+    "no-cond-assign": "error",
+    "no-trailing-spaces": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "semi-spacing": ["error", { "before": false, "after": true }],
+    "object-curly-spacing": ["error", "always"],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": ["error", { "before": true }],
+    "react/jsx-equals-spacing": [2, "never"],
+    "space-infix-ops": "error",
+    "indent": [
+        1,
+        4,
+        {
+            "SwitchCase": 1
+        }
+    ],
+    "react/jsx-indent": [1, 4],
+    "react/jsx-indent-props": [1, 4],
+    "react/jsx-filename-extension": [
+        1,
+        {
+            "extensions": [".js", ".ts", ".tsx"]
+        }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-newline": [
+        2,
+        {
+            "consistent": true
+        }
+    ],
+    "quotes": [1, "single"], // only applies on js
+    "jsx-quotes": [1, "prefer-single"], // only applies on jsx
+    "no-underscore-dangle": "off",
+    "arrow-body-style": "off",
+    "react/no-unused-state": "warn",
+    "import/no-cycle": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-param-reassign": [
+        "error",
+        {
+            "props": false
+        }
+    ],
+    "react/function-component-definition": [
+        "error",
+        {
+            "namedComponents": "arrow-function"
+        }
+    ],
+    "semi": [
+        "warn",
+        "always"
+    ],
+    "eol-last": ["error", "always"]
+  }
+}
