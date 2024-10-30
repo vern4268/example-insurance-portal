@@ -6,6 +6,7 @@ export async function getUserList(page: number = 1): Promise<TUserList[]> {
     url.searchParams.append('page', page.toString());
 
     const response = await fetch(url);
+
     const responseData: TGetUserListAPIResponse = await response.json();
 
     let data = [...responseData.data];

@@ -25,13 +25,13 @@ const Users = () => {
             <div>
                 Full user list
 
-                <UserTable userList={userList} />
+                <UserTable userList={userList}/>
             </div>
 
             <div>
-                Users whose first name starts with {userFirstNameStartsWithFilter} and last name starts with {userLastNameStartsWithFilter}
+                Users whose first name starts with {userFirstNameStartsWithFilter} or last name starts with {userLastNameStartsWithFilter}
 
-                <UserTable userList={filteredUsers} />
+                <UserTable userList={filteredUsers}/>
             </div>
         </div>
     );

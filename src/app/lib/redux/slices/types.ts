@@ -1,5 +1,6 @@
 export type TUserSliceInitialState = {
     userList: TUserList[];
+    error: string;
 }
 
 export type TUserList = {

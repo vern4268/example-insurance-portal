@@ -5,12 +5,12 @@ import { getUserList } from './getUserList';
 
 const initialState: TUserSliceInitialState = {
     userList: [],
+    error: '',
 };
 
 export const fetchUserList = createAsyncThunk(
     'user/getUserList',
     async () => {
-        console.log('fetch user list');
         const response = await getUserList();
         return response;
     },

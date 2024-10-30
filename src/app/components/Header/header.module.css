@@ -1,14 +1,18 @@
 .container {
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px solid grey;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .home-button,
 .sign-out-button {
-    padding: 15px 20px;
+    padding: 10px;
     font-size: 26px;
     color: white;
     border: none;
@@ -21,6 +25,7 @@
 .sign-out-button {
     color: black;
     border: 1px solid black;
+    font-size: 16px;
 }
 
 .sign-out-button:hover {

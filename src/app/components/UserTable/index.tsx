@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { TUserList } from '@/app/lib/redux/slices/types';
 
@@ -7,8 +7,10 @@ import Styles from './userTable.module.css';
 const UserTable = ({
     userList,
 }: {
-    userList: TUserList[]
+    userList: TUserList[];
 }) => {
+    const [shouldMaskEmailAddress, setShouldMaskEmailAddress] = useState(true);
+
     const tableHeader = [
         'User ID',
         'First Name',
@@ -17,10 +19,32 @@ const UserTable = ({
         'Avatar',
     ];
 
+    const toggleEmailMasking = () => setShouldMaskEmailAddress(!shouldMaskEmailAddress);
+
+    const renderToggleEmailMaskingButton = (header: string) => {
+        if (header === 'Email') {
+            return (
+                <button
+                    onClick={toggleEmailMasking}
+                    className={Styles['mask-email-button']}
+                >
+                    <img
+                        src={shouldMaskEmailAddress ? '/eye-off.svg' : '/eye-on.svg'}
+                        alt={shouldMaskEmailAddress ? 'eye shut' : 'eye open'}
+                        width={20}
+                        height={20}
+                    />
+                </button>
+            );
+        }
+    };
+
     const renderTableHeader = tableHeader.map(header => {
         return (
             <th key={header}>
                 {header}
+
+                {renderToggleEmailMaskingButton(header)}
             </th>
         );
     });
@@ -49,7 +73,7 @@ const UserTable = ({
                 </td>
 
                 <td>
-                    {email}
+                    {shouldMaskEmailAddress ? Array(email.length + 1).join('*') : email}
                 </td>
 
                 <td>

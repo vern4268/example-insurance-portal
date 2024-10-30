@@ -21,9 +21,11 @@ const UsersLayout = async ({
         <div className={Styles.layout}>
             <Header />
 
-            <StoreProvider>
-                {children}
-            </StoreProvider>
+            <div className={Styles['content-container']}>
+                <StoreProvider>
+                    {children}
+                </StoreProvider>
+            </div>
 
             <Footer user={session.user}/>
         </div>

@@ -14,7 +14,7 @@ const Header = () => {
                     src='/next.svg'
                     alt='NextJS logo'
                     width={100}
-                    height={40}
+                    height={30}
                 />
             </Link>
 
