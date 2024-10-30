@@ -52,7 +52,7 @@ const Footer = ({
             {renderUser()}
 
             <div>
-                Z Insurance Customer Portal
+                Example Insurance Customer Portal
             </div>
         </div>
     );

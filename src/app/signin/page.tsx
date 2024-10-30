@@ -8,7 +8,7 @@ const SignIn = () => {
     return (
         <div className={Styles.container}>
             <h1>
-                Z Insurance Customer Portal
+                Example Insurance Customer Portal
             </h1>
 
             <div>
