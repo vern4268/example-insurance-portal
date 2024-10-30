@@ -10,6 +10,8 @@ This project uses Next Auth and Google OAuth for authentication. Here are the en
 
 Check out the [Google Guide](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) if you are unsure of how to obtain the Google credentials. AUTH_SECRET can be generated using the `npx auth secret` command. Copy and paste .env.example to .env and paste in all the env variables.
 
+Optional: Replace NEXTAUTH_URL in the env file, google authorised origins and redirect urls with your domain if needed.
+
 
 Install the project: 
 
