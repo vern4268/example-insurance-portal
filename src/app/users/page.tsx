@@ -23,12 +23,6 @@ const Users = () => {
     return (
         <div className={Styles.container}>
             <div>
-                Full user list
-
-                <UserTable userList={userList}/>
-            </div>
-
-            <div>
                 Users whose first name starts with {userFirstNameStartsWithFilter} or last name starts with {userLastNameStartsWithFilter}
 
                 <UserTable userList={filteredUsers}/>
