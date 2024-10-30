@@ -8,7 +8,7 @@ This project uses Next Auth and Google OAuth for authentication. Here are the en
 - GOOGLE_CLIENT_SECRET
 - AUTH_SECRET
 
-Check out the [Google Guide](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) if you are unsure of how to obtain the Google credentails. Please note that for Google OAuth to redirect back to this site, ${http://localhost:3000 / domain}/api/auth/callback/google needs to be added to the authorised redirect urls. AUTH_SECRET can be generated using the `npx auth secret` command. Copy and paste .env.example to .env and paste in all the env variables.
+Check out the [Google Guide](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) if you are unsure of how to obtain the Google credentials. Please note that for Google OAuth to redirect back, `http://localhost:3000/api/auth/callback/google` (substitute `http://localhost` with your domain if needed) needs to be added to the authorised redirect urls. AUTH_SECRET can be generated using the `npx auth secret` command. Finally, copy and paste .env.example to .env and paste in all the env variables.
 
 Install the project: 
 
