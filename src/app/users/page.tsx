@@ -25,7 +25,7 @@ const Users = () => {
             <div>
                 Users whose first name starts with {userFirstNameStartsWithFilter} or last name starts with {userLastNameStartsWithFilter}
 
-                <UserTable userList={filteredUsers}/>
+                <UserTable userList={filteredUsers} />
             </div>
         </div>
     );
