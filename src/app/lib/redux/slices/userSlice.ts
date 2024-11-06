@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { TUserSliceInitialState } from './types';
-import { getUserDetails } from '@/app/actions/users/getUserDetails';
+import { getUserDetails } from '@/app/actions/getUserDetails';
 
 const initialState: TUserSliceInitialState = {
-    gettingUserList: false,
     userList: [],
 };
 
