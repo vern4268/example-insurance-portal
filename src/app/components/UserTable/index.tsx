@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+'use client';
+import React from 'react';
 
 import { TUserList } from '@/app/lib/redux/slices/types';
+import { useAppDispatch } from '@/app/lib/redux/hooks';
+import { fetchUserDetails } from '@/app/lib/redux/slices/userSlice';
 
 import Styles from './userTable.module.css';
 
@@ -9,7 +12,7 @@ const UserTable = ({
 }: {
     userList: TUserList[];
 }) => {
-    const [shouldMaskEmailAddress, setShouldMaskEmailAddress] = useState(true);
+    const dispatch = useAppDispatch();
 
     const tableHeader = [
         'User ID',
@@ -19,35 +22,15 @@ const UserTable = ({
         'Avatar',
     ];
 
-    const toggleEmailMasking = () => setShouldMaskEmailAddress(!shouldMaskEmailAddress);
-
-    const renderToggleEmailMaskingButton = (header: string) => {
-        if (header === 'Email') {
-            return (
-                <button
-                    onClick={toggleEmailMasking}
-                    className={Styles['mask-email-button']}
-                >
-                    <img
-                        src={shouldMaskEmailAddress ? '/eye-off.svg' : '/eye-on.svg'}
-                        alt={shouldMaskEmailAddress ? 'eye shut' : 'eye open'}
-                        width={20}
-                        height={20}
-                    />
-                </button>
-            );
-        }
-    };
-
     const renderTableHeader = tableHeader.map(header => {
         return (
             <th key={header}>
                 {header}
-
-                {renderToggleEmailMaskingButton(header)}
             </th>
         );
     });
+
+    const handleEmailClick = (userId: number) => dispatch(fetchUserDetails(userId));
 
     const renderTableBody = userList.map(user => {
         const {
@@ -73,7 +56,12 @@ const UserTable = ({
                 </td>
 
                 <td>
-                    {shouldMaskEmailAddress ? Array(email.length + 1).join('*') : email}
+                    <button
+                        className={Styles['email-button']}
+                        onClick={() => handleEmailClick(id)}
+                    >
+                        {email}
+                    </button>
                 </td>
 
                 <td>

@@ -16,8 +16,10 @@
     border-top: 1px solid grey;
 }
 
-.mask-email-button {
-    padding: 0px;
-    height: 24px;
-    margin-left: 10px;
+.email-button {
+    cursor: pointer;
+}
+
+.email-button:hover {
+    background-color: lightgrey;
 }

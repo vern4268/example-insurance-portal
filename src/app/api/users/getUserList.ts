@@ -1,4 +1,4 @@
-import { TGetUserListAPIResponse, TUserList } from './types';
+import { TGetUserListAPIResponse, TUserList } from '../../lib/redux/slices/types';
 
 export async function getUserList(page: number = 1): Promise<TUserList[]> {
     const url = new URL('https://reqres.in/api/users');

@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-This project uses Next Auth and Google OAuth for authentication. Here are the env variables you need to supply before running the project: 
+This project uses Next Auth and Google OAuth for authentication. Here are the env variables you need to supply before running the project:
 
 - GOOGLE_CLIENT_ID
 - GOOGLE_CLIENT_SECRET
@@ -12,11 +12,10 @@ Check out the [Google Guide](https://developers.google.com/identity/gsi/web/guid
 
 Optional: Replace NEXTAUTH_URL in the env file, google authorised origins and redirect urls with your domain if needed.
 
-
-Install the project: 
+Install the project:
 
 ```bash
-npm run install
+npm install
 # or
 yarn
 ```

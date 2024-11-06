@@ -1,4 +1,5 @@
 export type TUserSliceInitialState = {
+    gettingUserList: boolean;
     userList: TUserList[];
 }
 
