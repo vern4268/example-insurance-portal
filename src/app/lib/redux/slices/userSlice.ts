@@ -31,15 +31,17 @@ export const userSlice = createSlice({
             state.userList = action.payload;
         });
         builder.addCase(fetchUserDetails.fulfilled, (state, action) => {
-            const updatedUserList = state.userList.map(user => {
-                if (user.id === action.payload.id) {
-                    return action.payload;
-                }
+            if (action.payload) {
+                const updatedUserList = state.userList.map(user => {
+                    if (user.id === action.payload?.id) {
+                        return action.payload;
+                    }
 
-                return user;
-            });
+                    return user;
+                });
 
-            state.userList = updatedUserList;
+                state.userList = updatedUserList;
+            }
         });
     },
 });
